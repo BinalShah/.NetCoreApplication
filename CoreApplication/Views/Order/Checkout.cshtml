@@ -1,0 +1,136 @@
+﻿@model Order
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<form asp-action="Checkout" method="post" class="form-horizontal" role="form">
+    <div class="checkoutrow">
+        <h4>You're just one step away from your delicious pies.</h4>
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="col-75">
+            <div class="checkoutcontainer">
+              
+                    <div class="checkoutrow">
+                        <div class="col-50">
+                            <h3>Billing Address</h3>
+                            <div class="form-group">
+                                <label asp-for="LastName" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="LastName" class="form-control" />
+                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="FirstName" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="FirstName" class="form-control" />
+                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AddressLine1" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="AddressLine1" class="form-control" />
+                                    <span asp-validation-for="AddressLine1" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="AddressLine2" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="AddressLine2" class="form-control" />
+                                    <span asp-validation-for="AddressLine2" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="ZipCode" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="ZipCode" class="form-control" />
+                                    <span asp-validation-for="ZipCode" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="City" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="City" class="form-control" />
+                                    <span asp-validation-for="City" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="State" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="State" class="form-control" />
+                                    <span asp-validation-for="State" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Country" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="Country" class="form-control" />
+                                    <span asp-validation-for="Country" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="PhoneNumber" class="form-control" />
+                                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Email" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-50">
+                            <h3>Payment</h3>
+                            <label for="fname">Accepted Cards</label>
+                            <div class="icon-container">
+                                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                <i class="fa fa-cc-discover" style="color:orange;"></i>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="CreditCard" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="CreditCard" class="form-control" />
+                                    <span asp-validation-for="CreditCard" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CcType" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="CcType" class="form-control" />
+                                    <span asp-validation-for="CcType" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Expiration" class="col-md-2 control-label"></label>
+                                <div class="col-md-5">
+                                    <input asp-for="Expiration" class="form-control" />
+                                    <span asp-validation-for="Expiration" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <label>
+                        <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                    </label>
+                    <input type="submit" value="Continue to checkout" class="btn">
+            
+            </div>
+        </div>
+
+    </div>
+</form>
